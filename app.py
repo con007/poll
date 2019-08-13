@@ -100,7 +100,6 @@ if __name__ == '__main__':
     hostname = socket.gethostname()
          
     print "Check if a poll already exists into db"
-    # TODO check the latest one filtered by timestamp
     poll = Poll.query.first()
     
     if poll:
@@ -124,5 +123,5 @@ if __name__ == '__main__':
           print "Cannot load seed data from file"
           poll = Poll("", "")
     
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=3000, debug=False)
 
