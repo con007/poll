@@ -95,8 +95,8 @@ def results():
 
 if __name__ == '__main__':
 
-#    db.session.commit()
- #   db.drop_all()    
+    #db.session.commit()
+    #db.drop_all()    
     db.create_all()
     db.session.commit()
     hostname = socket.gethostname()

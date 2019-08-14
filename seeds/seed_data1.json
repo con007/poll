@@ -2,7 +2,7 @@
  "poll": "Public Mood",
  "question": "What is your mood about scrapping of 370?",
  "options": [ "Positive",
-              "Neative",
+              "Negative",
               "Neutral"
             ]
 }
