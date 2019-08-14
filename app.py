@@ -94,7 +94,9 @@ def results():
     return render_template('results.html', hostname=hostname, poll=poll, results=results)
 
 if __name__ == '__main__':
-    
+
+#    db.session.commit()
+ #   db.drop_all()    
     db.create_all()
     db.session.commit()
     hostname = socket.gethostname()
@@ -110,7 +112,7 @@ if __name__ == '__main__':
     else:
        print "Load seed data from file"
        try: 
-           with open(os.path.join(basedir, 'seeds/seed_data.json')) as file:
+           with open(os.path.join(basedir, 'seeds/seed_data1.json')) as file:
                seed_data = json.load(file)
                print "Start a new poll"
                poll = Poll(seed_data['poll'], seed_data['question'])
@@ -123,5 +125,5 @@ if __name__ == '__main__':
           print "Cannot load seed data from file"
           poll = Poll("", "")
     
-    app.run(host='0.0.0.0', port=3000, debug=False)
+    app.run(host='0.0.0.0', port=3000, debug=True)
 
